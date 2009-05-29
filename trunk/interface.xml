@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<interface>
+  <object class="GtkListStore" id="model1">
+    <columns>
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">1 poziom</col>
+      </row>
+      <row>
+        <col id="0">2 poziom</col>
+      </row>
+      <row>
+        <col id="0">3 poziom</col>
+      </row>
+    </data>
+  </object>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="window">
+    <property name="width_request">460</property>
+    <property name="height_request">320</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <signal handler="on_window_destroy" name="destroy"/>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="width_request">460</property>
+        <property name="height_request">320</property>
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkHSeparator" id="hseparator1">
+            <property name="width_request">300</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHSeparator" id="hseparator2">
+            <property name="width_request">300</property>
+            <property name="height_request">21</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHSeparator" id="hseparator3">
+            <property name="width_request">300</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHSeparator" id="hseparator4">
+            <property name="width_request">300</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">300</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator1">
+            <property name="width_request">19</property>
+            <property name="height_request">300</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator2">
+            <property name="width_request">20</property>
+            <property name="height_request">300</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator3">
+            <property name="width_request">20</property>
+            <property name="height_request">300</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkVSeparator" id="vseparator4">
+            <property name="width_request">20</property>
+            <property name="height_request">300</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="x">300</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFrame" id="frame1">
+            <property name="width_request">129</property>
+            <property name="height_request">114</property>
+            <property name="visible">True</property>
+            <property name="label_xalign">0</property>
+            <child>
+              <object class="GtkAlignment" id="alignment1">
+                <property name="visible">True</property>
+                <property name="left_padding">5</property>
+                <child>
+                  <object class="GtkFixed" id="fixed2">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkComboBox" id="poziom">
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="model">model1</property>
+                        <child>
+                          <object class="GtkCellRendererText" id="renderer1"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="x">5</property>
+                        <property name="y">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="generuj">
+                        <property name="label" translatable="yes">Generuj!</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_generuj_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="x">5</property>
+                        <property name="y">35</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="czytajzpliku">
+                        <property name="label" translatable="yes">Wczytaj z pliku</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_czytajzpliku_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="x">5</property>
+                        <property name="y">69</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHSeparator" id="hseparator5">
+                        <property name="width_request">113</property>
+                        <property name="height_request">4</property>
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="x">2</property>
+                        <property name="y">63</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="label">
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;Generuj now&#x105;&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">320</property>
+            <property name="y">168</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="zakoncz">
+            <property name="label" translatable="yes">Zako&#x144;cz</property>
+            <property name="width_request">130</property>
+            <property name="height_request">25</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal handler="on_zakoncz_clicked" name="clicked"/>
+          </object>
+          <packing>
+            <property name="x">320</property>
+            <property name="y">286</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="00">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="01">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="02">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="03">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="04">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="05">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="06">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="07">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="08">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">17</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="10">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="11">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="12">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="13">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="14">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="15">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="16">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="17">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="18">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">48</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="20">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="21">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="22">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="23">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="24">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="25">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="26">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="27">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="28">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">79</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="30">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="31">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="32">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="33">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="34">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="35">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="36">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="37">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="38">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">117</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="40">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="41">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="42">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="43">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="44">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="45">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="46">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="47">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="48">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">148</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="50">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="51">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="52">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="53">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="54">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="55">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="56">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="57">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="58">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">179</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="60">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="61">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="62">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="63">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="64">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="65">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="66">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="67">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="68">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">217</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="70">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="71">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="72">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="73">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="74">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="75">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="76">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="77">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="78">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">248</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="80">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">17</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="81">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">48</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="82">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="83">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">117</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="84">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="85">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">179</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="86">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="87">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">248</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="88">
+            <property name="width_request">24</property>
+            <property name="height_request">24</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="events">GDK_LEAVE_NOTIFY_MASK | GDK_STRUCTURE_MASK</property>
+            <property name="max_length">1</property>
+            <property name="width_chars">1</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="xalign">0.5</property>
+            <property name="shadow_type">etched-in</property>
+            <signal handler="on_input_changed" name="changed"/>
+          </object>
+          <packing>
+            <property name="x">279</property>
+            <property name="y">279</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFrame" id="frame2">
+            <property name="width_request">130</property>
+            <property name="height_request">160</property>
+            <property name="visible">True</property>
+            <property name="label_xalign">0</property>
+            <child>
+              <object class="GtkAlignment" id="alignment2">
+                <property name="visible">True</property>
+                <property name="left_padding">10</property>
+                <child>
+                  <object class="GtkFixed" id="fixed3">
+                    <property name="visible">True</property>
+                    <child>
+                      <object class="GtkButton" id="rozwiaz">
+                        <property name="label" translatable="yes">Rozwi&#x105;&#x17C;</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_rozwiaz_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="y">35</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="cofnij">
+                        <property name="label" translatable="yes">Cofnij ruch</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_cofnij_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="y">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="wyczysc">
+                        <property name="label" translatable="yes">Wyczy&#x15B;&#x107;</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_wyczysc_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="y">95</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="podpowiedzi">
+                        <property name="label" translatable="yes">Podpowiedzi</property>
+                        <property name="width_request">100</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="y">120</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="sprawdz">
+                        <property name="label" translatable="yes">Sprawad&#x17A;</property>
+                        <property name="width_request">110</property>
+                        <property name="height_request">25</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <signal handler="on_sprawdz_clicked" name="clicked"/>
+                      </object>
+                      <packing>
+                        <property name="y">65</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="label">
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;b&gt;Gra&lt;/b&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">320</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
