@@ -49,7 +49,8 @@ G_MODULE_EXPORT void on_cofnij_clicked (GtkObject *object, gpointer user_data){
 }
 
 G_MODULE_EXPORT void on_rozwiaz_clicked (GtkObject *object, gpointer user_data){
-    wypelnij_tablice();
+//    wypelnij_tablice();
+    recursive(1, 1);
     if(sprawdz()){
         GtkWidget *dialog = gtk_message_dialog_new (user_data,
                                                     GTK_DIALOG_MODAL,

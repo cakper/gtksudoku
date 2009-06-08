@@ -234,3 +234,37 @@ void generuj_tablice(int poziom){
     komplikuj_tablice(poziom);
     aktualizuj_interface(1);
 }
+
+int recursive(int a, int b){
+    int i;
+	if(tab[a-1][b-1][0]!=0){
+		if((a==9)&&(b==9)) return 1;
+		if(b==9){
+			a++;
+			b=1;
+		}
+		else b++;
+		return recursive(a,b);
+	} else{
+		for(i=1;i<10;i++){
+                    int xy;
+                    xy = 10*a + b;
+			if((sprawdz_poprawnosc(xy,i)==1)){
+				int c,d;
+				c=a;
+				d=b;
+				tab[a-1][b-1][0]=i;
+				if((c==9)&&(d==9)) return 1;
+				if(d==9){
+					c++;
+					d=1;
+				}
+    			else d++;
+    			if(recursive(c,d)==1) return 1;
+   			}
+			tab[a-1][b-1][0]=0;
+		}
+  		return 0;
+ 	}
+    aktualizuj_interface(0);
+}
